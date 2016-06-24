@@ -29,10 +29,13 @@ class SwaggerUIController extends Controller
 
         $url = rtrim($url, '/');
 
+        $response = new Response();
+        $response->headers->set('Content-Type', 'text/html');
+
         return $this->render('ALSwaggerUIBundle:SwaggerUI:index.html.twig', array(
             'resource_list_url' => $url,
             'js_config' => $jsConfig,
             'auth_config' => $authConfig
-        ));
+        ), $response);
     }
 }
