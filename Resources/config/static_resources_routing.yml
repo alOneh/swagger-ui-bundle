@@ -1,5 +1,5 @@
 al_swagger_ui_static_resource_list:
-    path: /
+    path: ""
     defaults:
         _controller: ALSwaggerUIBundle:StaticResources:resourceList
 
